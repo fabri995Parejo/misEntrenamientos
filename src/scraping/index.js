@@ -138,7 +138,7 @@ async function MostrarElementosdeWebComplicado(){
 //MostrarElementosdeWebComplicado()
 
 async function MostrarDolar(){
-
+    
     //muestra varios elementos (que tienen etiquetas iguales)
     const browser = await puppeteer.launch(/*{
         headless: false,
@@ -153,21 +153,13 @@ async function MostrarDolar(){
     const result = await page.evaluate(() => {
         //con evaluate puedo "hacer" codigo dentro de la pagina
         const compraVenta = document.querySelectorAll("#DolarPromedio .colCompraVenta"); //tiene 10 .quotes, asi q hago arreglo
-        /*const data = [...compraVenta].map((quote) => {
-            const columnDolarBlueVenta = compraVenta[1];
-            const columnDolarBlueCompra = compraVenta[0];
-            return{
-                columnDolarBlueCompra,
-                columnDolarBlueVenta
-            }
-        });
-        return data*/
+        
 
         //Hay 27 columnas, las primeras dos son del dolar blue
         const columnDolarBlueVenta = compraVenta[1];
         const columnDolarBlueCompra = compraVenta[0];
 
-        const dolarVentaConAumento = columnDolarBlueVenta.innerText; //"$ 1.280,00\n $ 35,00"
+        const dolarVentaConAumento = columnDolarBlueVenta.innerText; //por ejemplo: "$ 1.280,00\n $ 35,00"
         const dolarCompraConAumento = columnDolarBlueCompra.innerText; //"$ 1.260,00\n $ 35,00"
         //cada uno nos da 2 valores, uno del aumento y otro de la compra o venta
         //separo valor del dolar con el aumento o diferencia
@@ -195,7 +187,7 @@ async function MostrarDolar(){
     const __filename = fileURLToPath(import.meta.url);
     const __dirname = path.dirname(__filename);
 
-    // Tu código aquí
+    
     const screenshotPath = path.resolve(__dirname, '../main/resources/static/DolarHoyDia.png');
 
     
