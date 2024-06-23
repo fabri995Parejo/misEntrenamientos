@@ -66,11 +66,16 @@ public class Main {
             
 
             while(opcion.equals("continuar")){
-                System.out.println("Que quiere hacer?");
-                System.out.println("1- Precio del programa en pesos\n");
+                //Menu de opciones
+                System.out.println("¿Que quiere hacer?");
+                System.out.println("1- Precio del programa en pesos");
                 System.out.println("2-");
                 System.out.println("3-");
                 
+                opcion = scanner.nextLine();
+                
+
+                //Ejecucion de las opciones
                 if(opcion.equals("1")){
                     System.out.println("Ingrese el costo del programa en dolares");
                     costoProgDolar = scanner.nextInt();
@@ -80,11 +85,15 @@ public class Main {
             
                     costoProg = costoProgDolar * dolarVenta;
                     System.out.println("El programa en pesos esta: " + costoProg);
-                    System.out.println("Quiere ver el costo de otro programa? Escriba una de las siguientes opciones:");
-                    System.out.println("- continuar\n- salir");
-            
-                    opcion = scanner.nextLine().toLowerCase();
+                    
                 }
+
+                System.out.println("Escriba una de las siguientes opciones:");
+                System.out.println("- continuar\n- salir");
+            
+                opcion = scanner.nextLine().toLowerCase();
+                // Consumir la línea restante
+                
             }
 
         scanner.close();
