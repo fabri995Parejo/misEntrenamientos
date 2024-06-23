@@ -62,24 +62,30 @@ public class Main {
 
             int costoProgDolar; 
             int costoProg;
-            String salir = "continuar";
+            String opcion = "continuar";
+            
 
-            while(salir.equals("continuar")){
-            
-            System.out.println("Ingrese el costo del programa en dolares");
-            costoProgDolar = scanner.nextInt();
+            while(opcion.equals("continuar")){
+                System.out.println("Que quiere hacer?");
+                System.out.println("1- Precio del programa en pesos\n");
+                System.out.println("2-");
+                System.out.println("3-");
+                
+                if(opcion.equals("1")){
+                    System.out.println("Ingrese el costo del programa en dolares");
+                    costoProgDolar = scanner.nextInt();
 
-            // Consumir la línea restante
-            scanner.nextLine();
+                    // Consumir la línea restante
+                    scanner.nextLine();
             
-            costoProg = costoProgDolar * dolarVenta;
-            System.out.println("El programa en pesos esta: " + costoProg);
-            System.out.println("Quiere ver el costo de otro programa? Escriba una de las siguientes opciones:");
-            System.out.println("- continuar\n- salir");
+                    costoProg = costoProgDolar * dolarVenta;
+                    System.out.println("El programa en pesos esta: " + costoProg);
+                    System.out.println("Quiere ver el costo de otro programa? Escriba una de las siguientes opciones:");
+                    System.out.println("- continuar\n- salir");
             
-            salir = scanner.nextLine().toLowerCase();
-            
-        }
+                    opcion = scanner.nextLine().toLowerCase();
+                }
+            }
 
         scanner.close();
 
