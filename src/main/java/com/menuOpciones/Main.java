@@ -1,4 +1,4 @@
-package precioPrograma;
+package menuOpciones;
 
 import utilidades.*;
 //Estas importaciones son necesarias para leer la entrada y salida del proceso que se va a ejecutar.
@@ -67,10 +67,10 @@ public class Main {
 
             while(opcion.equals("continuar")){
                 //Menu de opciones
-                System.out.println("¿Que quiere hacer?");
+                System.out.println("¿Que operacion desea hacer? Escriba el numero de la opcion");
                 System.out.println("1- Precio del programa en pesos");
-                System.out.println("2-");
-                System.out.println("3-");
+                System.out.println("2- ");
+                System.out.println("3- ");
                 
                 opcion = scanner.nextLine();
                 
@@ -88,7 +88,7 @@ public class Main {
                     
                 }
 
-                System.out.println("Escriba una de las siguientes opciones:");
+                System.out.println("Quiere hacer otra operacion o salir? Escriba una de las siguientes opciones:");
                 System.out.println("- continuar\n- salir");
             
                 opcion = scanner.nextLine().toLowerCase();
